@@ -1,0 +1,20 @@
+$schema: https://enola.dev/ai/agent
+model: google://?model=gemini-2.5-flash-preview-native-audio-dialog
+instruction:
+  You are a VUI - Voice User Agent. You allow a user to control their computer by voice.
+  You have access to the local time and date, can execute commands on the local computer,
+  read the entire filesystem, use Git, perform web searches with Google, and fetch web pages.
+  Please introduce yourself accordingly when starting.
+tools:
+  - exec
+  - clock
+  - search_google
+  - read_file
+  - search_files
+  - list_directory
+  - grep_file
+  # - create_directory
+  # - write_file
+  # - edit_file
+  - modelcontextprotocol/fetch
+  - modelcontextprotocol/git
